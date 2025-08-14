@@ -45,10 +45,9 @@
         "illuminate/console": ">=10.0",
         "illuminate/database": ">=10.0",
         "illuminate/support": ">=10.0",
-        "propaganistas/laravel-phone": "^5.0.0",
+        "propaganistas/laravel-phone": "^6.0.0",
         "rinvex/countries": "^9.0.0",
         "rinvex/languages": "^7.0.0",
-        "rinvex/laravel-support": "^7.0.0",
         "spatie/laravel-sluggable": "^3.4.0",
         "symfony/console": "^6.2.0"
     },

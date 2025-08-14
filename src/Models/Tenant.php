@@ -67,11 +67,8 @@ use Illuminate\Database\Eloquent\Relations\MorphToMany;
  */
 class Tenant extends Model
 {
-    use HasSlug;
     use HasFactory;
     use SoftDeletes;
-    use HasTranslations;
-    use ValidatingTrait;
 
     /**
      * {@inheritdoc}
