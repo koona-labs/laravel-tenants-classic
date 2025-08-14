@@ -158,26 +158,6 @@ class Tenant extends Model
     public function __construct(array $attributes = [])
     {
         $this->setTable(config('rinvex.tenants.tables.tenants'));
-        $this->mergeRules([
-            'slug' => 'required|alpha_dash|max:150|unique:'.config('rinvex.tenants.models.tenant').',slug',
-            'domain' => 'nullable|strip_tags|max:150|unique:'.config('rinvex.tenants.models.tenant').',domain',
-            'name' => 'required|string|strip_tags|max:150',
-            'description' => 'nullable|string|max:32768',
-            'email' => 'required|email:rfc,dns|min:3|max:128|unique:'.config('rinvex.tenants.models.tenant').',email',
-            'website' => 'nullable|url|max:1500',
-            'phone' => 'nullable|phone:AUTO',
-            'country_code' => 'required|alpha|size:2|country',
-            'language_code' => 'required|alpha|size:2|language',
-            'state' => 'nullable|string',
-            'city' => 'nullable|string',
-            'address' => 'nullable|string',
-            'postal_code' => 'nullable|string',
-            'launch_date' => 'nullable|date_format:Y-m-d',
-            'timezone' => 'nullable|string|max:64|timezone',
-            'currency' => 'nullable|alpha|size:3|currency',
-            'is_active' => 'sometimes|boolean',
-        ]);
-
         parent::__construct($attributes);
     }
 
