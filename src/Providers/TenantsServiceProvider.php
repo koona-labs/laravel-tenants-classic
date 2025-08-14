@@ -10,24 +10,11 @@ use Rinvex\Tenants\Models\Tenant;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
-use Rinvex\Tenants\Console\Commands\MigrateCommand;
-use Rinvex\Tenants\Console\Commands\PublishCommand;
 use Illuminate\Database\Eloquent\Relations\Relation;
-use Rinvex\Tenants\Console\Commands\RollbackCommand;
 
 class TenantsServiceProvider extends ServiceProvider
 {
 
-    /**
-     * The commands to be registered.
-     *
-     * @var array
-     */
-    protected $commands = [
-        MigrateCommand::class,
-        PublishCommand::class,
-        RollbackCommand::class,
-    ];
 
     /**
      * {@inheritdoc}
